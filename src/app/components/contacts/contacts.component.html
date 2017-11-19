@@ -1,0 +1,15 @@
+<ul class="contacts">
+  <li *ngFor="let contact of contacts">
+    <div class="contact-element" (click)="gotoDetail(contact)">
+      <span class="badge">{{contact.id}}</span>
+      {{contact.first_name}}
+      {{contact.second_name}}
+      {{contact.patronymic}}
+    </div>
+    <button class="btn btn-default delete-button" (click)="delete(contact)">x</button>
+  </li>
+</ul>
+
+<div class="error" *ngIf="error">{{error}}</div>
+<button (click)="gotoDetail()">+</button>
+

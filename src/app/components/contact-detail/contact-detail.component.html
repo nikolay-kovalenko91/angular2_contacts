@@ -1,0 +1,26 @@
+<div *ngIf="contact" class="contact">
+  <h2>{{contact.first_name}}</h2>
+  <div>
+    <label>Имя: </label>
+    <input [(ngModel)]="contact.first_name" placeholder="Имя" />
+  </div>
+  <div>
+    <label>Фамилия: </label>
+    <input [(ngModel)]="contact.second_name" placeholder="Фамилия" />
+  </div>
+  <div>
+    <label>Отчество: </label>
+    <input [(ngModel)]="contact.patronymic" placeholder="Отчество" />
+  </div>
+  <div>
+    <label>Телефон: </label>
+    <input [(ngModel)]="contact.phone" placeholder="Телефон" />
+  </div>
+  <div>
+    <label>Email: </label>
+    <input [(ngModel)]="contact.email" placeholder="Email" />
+  </div>
+  <button class="save-button" (click)="save()">Сохранить</button>
+</div>
+<div class="error" *ngIf="error">{{error}}</div>
+<button (click)="goBack()">Назад</button>
